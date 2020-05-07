@@ -1,0 +1,7 @@
+#myCarousel{
+    width:100%;
+}
+#myCarousel img {
+    margin:auto;
+    max-height:1024px;
+}

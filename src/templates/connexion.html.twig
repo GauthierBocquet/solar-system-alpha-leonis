@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href='../css/barre_menu.css' type='text/css' />
+    <link rel='stylesheet' href='../css/userConnexion.css' type='text/css' />
+    <title>Alpha Leonis</title>
+</head>
+
+    {% include 'barre_menu.html.twig' %}
+
+{% block connexion %}
+    {% if connexionState is null %}
+        <div style="width:100%;text-align:center;color:red;" >
+            <h1>Vous êtes connectés</h1>
+        </div>
+    {% else %}
+    <body>
+
+        <div id="container">
+            <!-- zone de connexion -->
+
+            <form action="../bdd/ConnexionUser.class.php" method="POST">
+                <h1>Connexion</h1>
+
+                <label><b>Nom d'utilisateur</b></label>
+                <input class="connexion" type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+                <label><b>Mot de passe</b></label>
+                <input class="connexion" type="password" placeholder="Entrer le mot de passe" name="password" required>
+                <a href='../php/inscription.php' class="forgot">Pas encore inscrit ?</a>
+                <input type="submit" id='submit' value='Sign in' >
+            </form>
+        </div>
+
+    </body>
+    {%  endif  %}
+
+{% endblock %}

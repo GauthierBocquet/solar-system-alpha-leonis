@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href='../css/barre_menu.css' type='text/css' />
+    <link rel='stylesheet' href='../css/userConnexion.css' type='text/css' />
+    <title>Alpha Leonis</title>
+</head>
+{% include 'barre_menu.html.twig' %}
+
+{% block connexion %}
+
+    <body>
+    <div class="login">
+        <form action="../bdd/InscriptionUser.class.php" method="post">
+            <input type="text" placeholder="Username" name="username">
+            <input type="password" placeholder="Password" name="password">
+            <input type="password" placeholder="Retape ton pwd" name="spassword">
+            <a href='../php/connexion.php' class="forgot">Déjà inscrit ?</a>
+            <input  type="submit" value="Register">
+        </form>
+    </div>
+    <div class="shadow"></div>
+    </body>
+
+{% endblock %}

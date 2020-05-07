@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href='../css/barre_menu.css' type='text/css' />
+    <link rel='stylesheet' href='../css/userConnexion.css' type='text/css' />
+    <link rel='stylesheet' href='../css/favoris.css' type='text/css' />
+
+    <title>Alpha Leonis</title>
+</head>
+
+{% include 'barre_menu.html.twig' %}
+{%  for favori in favoris %}
+<div id="pattern" class="pattern">
+    <ul class="list img-list">
+        <li class="li-block">
+            <a href="../php/info.php?{% if favori.abv is not empty %}constellation={{ favori.abv }}{% else %}planete={{ favori.nom }}{% endif %}" class="inner">
+                <div class="li-img">
+                    <img src="../assets/img/{{ favori.nom }}/01.jpeg" alt="Constellation" />
+                </div>
+                <div class="li-text">
+                    <h4 class="li-head">{{ favori.nom }}</h4>
+                    <p class="li-sub">{{ favori.tags }}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+{%  endfor %}

@@ -1,0 +1,39 @@
+.list li {
+    background: url("https://bradfrost.github.com/this-is-responsive/patterns/images/icon_arrow_right.png") no-repeat 97% 50%;
+    border-bottom: 1px solid #ccc;
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+.inner {
+    display: table-row;
+    overflow: hidden;
+}
+.li-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30%;
+    padding-right: 1em;
+}
+.li-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.li-text {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+}
+.li-head {
+    font-size: 2em;
+    margin: 0;
+}
+.li-sub {
+    margin: 0;
+}
+ul .li-block {
+    background-color: white;
+    z-index:10;
+}
+
