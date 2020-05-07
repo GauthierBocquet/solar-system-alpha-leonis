@@ -8,9 +8,9 @@ Pré-requis :
     
    Modifiez les variables suivantes :
     
-    dbname=*votre bdd*;
-    host=  *votre host*;
-    port=  *votre port*;
+    'dbname' *votre bdd*;
+    'host'  *votre host*;
+    'port' *votre port*;
     'root' *par votre identifiant*
     'pwd'  *par votre mdp*
 
